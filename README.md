@@ -1,10 +1,12 @@
-Ever wish that there was a *really* simple way to generate a static site without all of the extra confusing"stuff"?
+Ever wish you could simply write some markdown files and convert them into web pages for your no-fuss static site?
 
-Statica allows you to build a static web site using plain ol' HTML files _but_ write your main content using markdown!
+Introducing Statica - a dead simple zero config static site builder for people who don't need all that fancy "stuff". 
+
+It's perfect for static sites when you simply want to write content in markdown and easily convert them to web pages!
 
 # Install
 
-`npm install statica`
+`npm install -g statica`
 
 # Usage
 
@@ -51,7 +53,7 @@ For example, your site layout might look like:
 - about.md
 - _template.html
 
-After generating the site, the compiled layout will be:
+After generating the site, the compiled layout will be (inside `./www`):
 
 - articles
    - article1.html
