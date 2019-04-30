@@ -63,4 +63,12 @@ After generating the site, the compiled layout will be (inside `./www`):
 - index.html
 - about.html
 
+## Build It!
+
+When installed as a global npm tool, open a terminal from the root of your site then run `statica`.
+
+The compiled web site will be copied to a `www` folder.
+
+**That's all folks!**
+
 
