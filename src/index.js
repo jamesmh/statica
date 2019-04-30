@@ -11,6 +11,14 @@ const distFolderGlob = "www/**/*.*";
 const markdownFilesGlob = '**/*.md';
 const templateFile = "_template.html";
 
+const logGreen = message => console.log('\x1b[32m%s\x1b[0m', message);
+const logRed = message => console.log('\x1b[31m%s\x1b[0m', message);
+const logMagenta = message => console.log('\x1b[35m%s\x1b[0m', message);
+
+console.log('');
+logGreen('Statica is working...')
+console.log('');
+
 const getDirectoryFromFile = file => {
     const array = file.split(/[/\\]/);
     return array.slice(0, array.length - 1).join("/");
@@ -51,7 +59,7 @@ const processMarkdownFiles = async (err, markdownFiles) => {
 
             const outputFilename = distFolder + filename + ".html";
 
-            console.log(`creating: ` + outputFilename);
+            logMagenta(`processing ` + outputFilename);
             fs.writeFile(outputFilename, newContentArray.join(""), throwErr);
         });
     }
@@ -63,7 +71,7 @@ const copyFilesToOutputFolder = async (err, files) => {
     for(const file of files) {
         const dir = getDirectoryFromFile(file);
         await tryCreateDir(distFolder + dir);
-        console.log(`copying file: ` + distFolder + file);
+        logMagenta(`processing ` + distFolder + file);
         fs.copyFile(file, distFolder + file, throwErr);
     }
 }
@@ -75,3 +83,9 @@ glob(markdownFilesGlob, {
 glob('**/**.*', { ignore: [templateFile, distFolderGlob, markdownFilesGlob, assetsFolderGlob] }, copyFilesToOutputFolder);
 
 glob(assetsFolderGlob, copyFilesToOutputFolder);
+
+process.on('exit', () => {
+    console.log();
+    logGreen("Phew! Statica is all done!");
+    logGreen("Check './www' to see your compiled site.");
+})
