@@ -11,6 +11,7 @@ const distFolder = "www/";
 const assetsFolderGlob = "assets/**/*.*";
 const distFolderGlob = "www/**/*.*";
 const markdownFilesGlob = '**/*.md';
+const nodeModulesGlob = "node_modules/**/*.*";
 const templateFile = "_template.html";
 
 const logGreen = message => console.log('\x1b[32m%s\x1b[0m', message);
@@ -78,10 +79,10 @@ const copyFilesToOutputFolder = async (err, files) => {
 }
 
 glob(markdownFilesGlob, {
-    ignore: [assetsFolderGlob, distFolderGlob]
+    ignore: [assetsFolderGlob, distFolderGlob, nodeModulesGlob]
 }, processMarkdownFiles);
 
-glob('**/**.*', { ignore: [templateFile, distFolderGlob, markdownFilesGlob, assetsFolderGlob] }, copyFilesToOutputFolder);
+glob('**/**.*', { ignore: [templateFile, distFolderGlob, markdownFilesGlob, assetsFolderGlob, nodeModulesGlob] }, copyFilesToOutputFolder);
 
 glob(assetsFolderGlob, copyFilesToOutputFolder);
 
