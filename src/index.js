@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const promisify = require('util').promisify;
 const fs = require('fs');
 const readline = require('readline');
@@ -12,7 +14,6 @@ const markdownFilesGlob = '**/*.md';
 const templateFile = "_template.html";
 
 const logGreen = message => console.log('\x1b[32m%s\x1b[0m', message);
-const logRed = message => console.log('\x1b[31m%s\x1b[0m', message);
 const logMagenta = message => console.log('\x1b[35m%s\x1b[0m', message);
 
 console.log('');

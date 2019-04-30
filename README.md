@@ -1,6 +1,6 @@
-Ever wish that there was a *really* simple way to generate a static site without all of the extra "stuff" that comes with most of these tools?
+Ever wish that there was a *really* simple way to generate a static site without all of the extra confusing"stuff"?
 
-Statica allows you to build a static web site, like you normally would with HTML files - _but_ write your main content using markdown!
+Statica allows you to build a static web site using plain ol' HTML files _but_ write your main content using markdown!
 
 # Install
 
@@ -10,15 +10,15 @@ Statica allows you to build a static web site, like you normally would with HTML
 
 ## Create The Template File
 
-Like all static site generators, you need a template that represents the "outer shell" of your HTML site.
+First, you need a template that represents the "outer shell" of your HTML site.
 
-First, create a file `_template.html` in the root of your site's folder.
+Create a file `_template.html` in the root of your site's folder.
 
-Next, just put whatever HTML you want in your template file!
+Next, just put whatever HTML you want into it!
 
-## Choose Where To Inject Content
+## Injecting Content
 
-Specify where content will be injected by adding the following to the appropriate spot in your template file:
+Specify where content will be injected (from your markdown files) by adding the following to your template file:
 
 `<!--@Content()-->`
 
@@ -36,18 +36,15 @@ The outer HTML might look like:
 
 ## Writing Content
 
-To write content and have pages generated for you, simply create markdown files with an extension `.md` anywhere you like. Each markdown file is converted into an HTML for your site.
+Write your markdown files (with an extension `.md`) anywhere you like. When compiled, each markdown file will be converted into an HTML file.
 
-Excluding any markdown files (which are converted to HTML files) and `_template.html`, all files in your site will be copied into `./www`.
+All other non-markdown files (HTML, JS, CSS, images, etc.) will be copied into `./www` for you too.
 
 For example, your site layout might look like:
 
 - articles
    - article1.md
-   - article2.md
 - assets
-   - img
-      - img1.jpg
    - js
       - jsfile.js
 - index.html
@@ -58,10 +55,7 @@ After generating the site, the compiled layout will be:
 
 - articles
    - article1.html
-   - article2.html
 - assets
-   - img
-      - img1.jpg
    - js
       - jsfile.js
 - index.html
