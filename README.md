@@ -6,6 +6,8 @@ Introducing Statica - a dead simple zero config static site builder for people w
 
 It's perfect for static sites when you simply want to write content in markdown and easily convert them to web pages!
 
+![diagram](docs/img/diagram.png)
+
 # Install
 
 `npm install -g statica`
