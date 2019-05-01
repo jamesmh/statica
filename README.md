@@ -62,4 +62,22 @@ The compiled web site will be copied to a `www` folder.
 
 **That's all folks!**
 
+# Q&A
+
+## Can I add plain HTML files?
+
+Yes! Statica will copy them over to the `www` folder for you when building. This might be useful for one-off pages that do differ quite a bit from your overall template.
+
+## Where do I put my site's assets (JS, CSS, etc.)?
+
+Anywhere you want - except directly in the `www` folder since this is generated for you.
+
+## Can I Use NPM Modules On My Site?
+
+Sure! Statica will ignore your `node_modules` folder when building your site. Just make sure your compiled files (via webpack, etc.) are being referenced in your HTML pages.
+
+## My Assets (JS, CSS) aren't working in my compiled site?
+
+Are you using relative paths?
+
 
