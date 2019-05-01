@@ -1,3 +1,5 @@
+![logo](docs/img/logo.png)
+
 Ever wish you could simply write some markdown files and convert them into web pages for your no-fuss static site?
 
 Introducing Statica - a dead simple zero config static site builder for people who don't need all that fancy "stuff". 
