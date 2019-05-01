@@ -44,24 +44,11 @@ All other non-markdown files (HTML, JS, CSS, images, etc.) will be copied into `
 
 For example, your site layout might look like:
 
-- articles
-   - article1.md
-- assets
-   - js
-      - jsfile.js
-- index.html
-- about.md
-- _template.html
+![pre-compiled](docs/img/pre-compiled.png)
 
 After generating the site, the compiled layout will be (inside `./www`):
 
-- articles
-   - article1.html
-- assets
-   - js
-      - jsfile.js
-- index.html
-- about.html
+![pre-compiled](docs/img/compiled.png)
 
 ## Build It!
 
