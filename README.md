@@ -60,7 +60,7 @@ When installed as a global npm tool, open a terminal from the root of your site 
 
 The compiled web site will be copied to a `www` folder.
 
-![terminal](docs/img/terminal.png)
+![terminal](docs/img/terminal-img.png)
 
 # Q&A
 
