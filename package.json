@@ -1,6 +1,6 @@
 {
   "name": "@jamesmh/statica",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Dead simple zero config static site generator",
   "main": "src/index.js",
   "bin": {
